@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 1rem =16 px  */
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* END CSS GLOBAL  */
+
+
+/* CSS HEADER  */
+
+.header {
+    background-color: #fff;
+    height: 70px;
+    padding: 0 20px;
+    /* thiet lap thang cha cho thang con nam chung 1 hang  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, .3);
+    /*xet vi tri*/
+    position: fixed;
+    /*lam thay doi width => set lai*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*chinh do uu tien cua header*/
+    z-index: 10;
+}
+
+.header__logo img {
+    width: 100px;
+}
+
+.header__nav>ul {
+    /* //bo dau cham di  */
+    list-style: none;
+}
+
+.header__nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header__nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.header__nav ul li a:hover {
+    color: #fa5238;
+    transition: all .4s;
+}
+
+.header__nav ul li.active a {
+    color: #fa5238;
+}
+
+.header__login {
+    color: #999;
+    font-size: 1.2rem;
+    /* chinh cho span va i nam giua  */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__login i {
+    font-size: 2rem !important;
+    margin-right: .8rem;
+}
+
+
+/* END CSS HEADER  */
+
+
+/* CSS CAROUSEL  */
+
+#carousel img {
+    width: 100%;
+}
+
+#carousel {
+    /* cao bang header fixed  */
+    margin-top: 70px;
+}
+
+
+/* END CSS CAROUSEL  */
+
+
+/* CSS MOVIE  */
+
+.section-title {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+}
+
+.section-title span {
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+.section-title span:hover {
+    color: #fa5238;
+    transition: all .4s;
+}
+
+.section-title span.active {
+    color: #fa5238;
+}
+
+.movie__content {
+    padding: 0 10%;
+}
+
+.movie__item img {
+    /* chieu rong toi da - to qua tu thu nho  */
+    max-width: 100%;
+    border-radius: .5rem;
+}
+
+.movie__item p {
+    font-size: 1.2rem;
+}
+
+.movie__item .btn-read-more {
+    background-color: #fa5238;
+    color: white;
+    padding: 0.7rem 0;
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    font-weight: bold;
+}
+
+
+/* END CSS MOIVE  */
+
+
+/*  CSS news  */
+
+.news__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(210px, auto);
+    padding: 0 10%;
+    grid-gap: 10px;
+}
+
+
+/* do the a la the inline khong chua block duoc 
+=> goi a re display block no
+*/
+
+.news__content a {
+    display: block;
+    height: 100%;
+}
+
+
+/* END CSS news  */
+
+
+/* BOOTSTRAP ROOT CONFIG  */
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* CUSTOMIZE THU VIEN HOVER EFFECT   */
+
+.news__content .grid {
+    padding: 0;
+}
+
+.news__content .grid figure {
+    min-width: unset;
+    max-width: unset;
+    /* //cho cai hinh to ra = cha chua no  */
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+.news__content figure.effect-ruby p {
+    padding: 1rem;
+}
